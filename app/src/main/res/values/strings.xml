@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Bpit Attendance</string>
+    <string name="drawer_open">drawer open</string>
+    <string name="drawer_close">drawer close</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="share">Share</string>
+    <string name="action_websearch">Web search</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="link_text">You are in Link activity</string>
+    <string name="made_by">MADE BY\n
+      NITESH SAHNI\n
+        RISHABH VIDHANI\n
+        ANKIT VARSHNEY\n
+        AKSHAT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello Put Some Link</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_home2">Home2Activity</string>
+    <string name="title_activity_splash2">Splash2Activity</string>
+    <string name="title_activity_link">LinkActivity</string>
+</resources>
