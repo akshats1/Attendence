@@ -21,10 +21,10 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ShareActionProvider;
 import android.widget.Toast;
+import android.webkit.CookieManager;
+import android.webkit.CookieSyncManager;
 
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;
+
 
 public class MainActivity extends AppCompatActivity
 {
@@ -48,6 +48,16 @@ public class MainActivity extends AppCompatActivity
                 WebSettings webSettings = mWebView.getSettings();
                 webSettings.setJavaScriptEnabled(true);
                 mWebView.loadUrl("http://bpit.markattendance.in/");
+                 CookieSyncManager.createInstance(this);
+               //it is default true, but hey...
+               CookieManager.getInstance().setAcceptCookie(true);
+                mWebView.setWebViewClient(new WebViewClient() {
+                   @Override
+                   public void onPageFinished(WebView view, String url) {
+                       super.onPageFinished(view, url);
+                       Log.d("Cookie", "url: " + url + ", cookies: " + CookieManager.getInstance().getCookie(url));
+                   }
+               });
                 mWebView.setWebViewClient(new MyAppWebViewClient() {
                     @Override
                     public void onPageFinished(WebView view, String url) {
