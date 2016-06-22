@@ -67,6 +67,15 @@ public class MainActivity extends AppCompatActivity
                         findViewById(R.id.activity_main_webview).setVisibility(View.VISIBLE);
                     }
                 });
+                 mWebView.setWebViewClient(new WebViewClient() {
+                   //@Override
+                   public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                       //Users will be notified in case there's an error (i.e. no internet connection)
+                       Toast.makeText(MainActivity.this, "Please try again later! " + description, Toast.LENGTH_LONG).show();
+                   }
+
+
+               });
 
             }
             else
