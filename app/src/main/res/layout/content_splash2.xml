@@ -12,4 +12,5 @@
     tools:context="com.example.akshat.attendence.Splash2Activity"
     tools:showIn="@layout/activity_splash2">
 
+
 </RelativeLayout>

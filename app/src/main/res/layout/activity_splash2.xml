@@ -6,11 +6,40 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.akshat.attendence.Splash2Activity">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
-    android:background="@drawable/bpit"
-    ></RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/logo" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="3"
+            android:background="@drawable/bpit" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="ATTENDANCE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff0000"
+            android:textSize="50dp"
+            android:textStyle="italic" />
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
