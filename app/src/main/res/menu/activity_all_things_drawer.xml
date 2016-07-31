@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_action_hdpi_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_attendance"
+            android:icon="@drawable/ic_action_view_as_list"
+            android:title="Attendance" />
+        <item
+            android:id="@+id/nav_result"
+            android:icon="@drawable/ic_action_hdpi_ecg"
+            android:title="Result" />
+        <item
+            android:id="@+id/nav_study_link"
+            android:icon="@drawable/ic_action_info"
+            android:title="Study Links" />
+        <item
+            android:id="@+id/nav_our_team"
+            android:icon="@drawable/ic_action_persons"
+            android:title="Our Team" />
+    </group>
+
+    <item android:title="Try Them">
+        <menu>
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_action_backspace"
+                android:title="Exit" />
+            <item
+                android:id="@+id/nav_renew_settings"
+                android:icon="@drawable/ic_action_settings"
+                android:title="Renew Credentials" />
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_action_share"
+                android:title="Share" />
+        </menu>
+    </item>
+
+</menu>

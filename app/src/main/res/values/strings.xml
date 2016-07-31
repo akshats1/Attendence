@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BPIT Attendance</string>
+    <string name="title_activity_all_things">AllThingsActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Change Color</string>
+    <string name="app_link">I am using an app named BPIT Attendance for our college BPIT to keep myself aware of my attendance.\nTry this app Now\n\n
+        <a href="https://drive.google.com/open?id=0BwNKV9VfKOJ5WkJLS1pMMVhQejQ">Link To Download App</a></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
