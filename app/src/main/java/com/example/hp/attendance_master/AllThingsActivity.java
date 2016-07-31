@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
@@ -164,33 +165,46 @@ public class AllThingsActivity extends AppCompatActivity
             fragmentTransaction.replace(R.id.frame_layout, homeFragment);
             fragmentTransaction.commit();
         } else if (id == R.id.nav_attendance) {
-            android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(this).create();
-            alertDialog.setTitle("View IT Great");
-            alertDialog.setMessage("Best Viewed in LANDSCAPE Mode\nTry it.....");
-            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    AttendanceFragment attendanceFragment = new AttendanceFragment();
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layout, attendanceFragment);
-                    fragmentTransaction.commit();
-                }
-            });
-            alertDialog.show();
+            if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+                android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(this).create();
+                alertDialog.setTitle("View IT Great");
+                alertDialog.setMessage("Best Viewed in LANDSCAPE Mode\nTry it.....");
+                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        AttendanceFragment attendanceFragment = new AttendanceFragment();
+                        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, attendanceFragment);
+                        fragmentTransaction.commit();
+                    }
+                });
+                alertDialog.show();
+            } else {
+                AttendanceFragment attendanceFragment = new AttendanceFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame_layout, attendanceFragment);
+                fragmentTransaction.commit();
+            }
 
         } else if (id == R.id.nav_result) {
-            android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(this).create();
-            alertDialog.setTitle("View IT Great");
-            alertDialog.setMessage("Best Viewed in LANDSCAPE Mode\nTry it.....");
-            alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int which) {
-                    ResultFragment resultFragment = new ResultFragment();
-                    FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-                    fragmentTransaction.replace(R.id.frame_layout, resultFragment);
-                    fragmentTransaction.commit();
-                }
-            });
-            alertDialog.show();
-
+            if (getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT) {
+                android.app.AlertDialog alertDialog = new android.app.AlertDialog.Builder(this).create();
+                alertDialog.setTitle("View IT Great");
+                alertDialog.setMessage("Best Viewed in LANDSCAPE Mode\nTry it.....");
+                alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        ResultFragment resultFragment = new ResultFragment();
+                        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                        fragmentTransaction.replace(R.id.frame_layout, resultFragment);
+                        fragmentTransaction.commit();
+                    }
+                });
+                alertDialog.show();
+            } else {
+                ResultFragment resultFragment = new ResultFragment();
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.frame_layout, resultFragment);
+                fragmentTransaction.commit();
+            }
         } else if (id == R.id.nav_study_link) {
             StudyLinkFragment studyLinkFragment = new StudyLinkFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
